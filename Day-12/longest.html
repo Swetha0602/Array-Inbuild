@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest</title>
+    <script>
+        function findLarge()
+        {
+            const arr = ["hii","hello","good","morning"] ;
+            const findLargest = (arr = []) => {
+            if(!arr?.length){
+            return '';
+            };
+             let res = '';
+             res = arr.reduce((acc, val) => {
+            return acc.length >= val.length ? acc : val;
+             });
+            return res;
+            };
+            var result = findLargest(arr);
+            document.getElementById("res").innerHTML= result;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Longest Word</h1>
+    <span>Array: ["hii","hello","good","morning"]</span><br><br>
+    <input type="button" value="Find Longest" onclick="findLarge()"><br><br>
+    Result: <span id="res"></span>
+</body>
+</html>

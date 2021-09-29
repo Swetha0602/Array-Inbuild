@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror</title>
+    <script>
+        function doReverse() {
+            var str= document.getElementById("ip1").value;
+            var str2 = str.split('');
+            var result = (str2.reverse().join(''));
+            document.getElementById("res").innerHTML= result;
+        }
+        
+
+        </script>
+        
+</head>
+<body>
+    <h1>Reversing the Inputs</h1>
+    Data: <input type="text" id="ip1"><br><br>
+    <input type="button" value="mirror" onclick="doReverse(this.value)"><br><br>
+    Result: <span id="res"></span>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seperation</title>
+    <script>
+        function doSeperate() {
+            var arr = ["hi",78,"hello",56,"good",25,"morning",63];
+            let numbers = (val) => {
+            if (typeof(val) === 'number')
+            {      
+                return val;
+            }
+        }
+            let result1 = arr.filter(numbers);
+            document.getElementById("res").innerHTML = result1;
+            let strings = (val) => {
+            if (typeof(val) === 'string')
+            {      
+                return val;
+            }
+        }
+            let result2 = arr.filter(strings);
+            document.getElementById("res2").innerHTML = result2;
+
+            
+        }
+        </script>
+</head>
+<body>
+    <h1>Seperating String and Nos</h1>
+    <span> Array : ["hi",78,"hello",56,"good",25,"morning",63] </span><br><br>
+    <input type="button" value="Seperate Values" onclick="doSeperate()"><br><br>
+    Number values: <span id="res"></span><br><br>
+    String values: <span id="res2"></span>
+
+</body>
+</html>
